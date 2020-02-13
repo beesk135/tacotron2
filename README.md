@@ -54,7 +54,7 @@ and the Mel decoder were trained on the same mel-spectrogram representation.
 
 
 ## Related repos
-[WaveGlow](https://github.com/NVIDIA/WaveGlow) Faster than real time Flow-based
+[WaveGlow](c Faster than real time Flow-based
 Generative Network for Speech Synthesis
 
 [nv-wavenet](https://github.com/NVIDIA/nv-wavenet/) Faster than real time

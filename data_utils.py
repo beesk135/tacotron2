@@ -29,6 +29,7 @@ class TextMelLoader(torch.utils.data.Dataset):
 
     def get_mel_text_pair(self, audiopath_and_text):
         # separate filename and text
+        print(audiopath_and_text)
         audiopath, text = audiopath_and_text[0], audiopath_and_text[1]
         text = self.get_text(text)
         mel = self.get_mel(audiopath)
@@ -50,7 +51,7 @@ class TextMelLoader(torch.utils.data.Dataset):
             assert melspec.size(0) == self.stft.n_mel_channels, (
                 'Mel dimension mismatch: given {}, expected {}'.format(
                     melspec.size(0), self.stft.n_mel_channels))
-
+        
         return melspec
 
     def get_text(self, text):
@@ -60,7 +61,7 @@ class TextMelLoader(torch.utils.data.Dataset):
     def __getitem__(self, index):
         return self.get_mel_text_pair(self.audiopaths_and_text[index])
 
-    def __len__(self):
+    def __len__(self) :
         return len(self.audiopaths_and_text)
 
 
